@@ -41,7 +41,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\AcademicPeriod.cs" />
+    <Compile Include="Models\BloodType.cs" />
+    <Compile Include="Models\Campus.cs" />
+    <Compile Include="Models\CandidateRegister.cs" />
+    <Compile Include="Models\CandidateType.cs" />
+    <Compile Include="Models\AcademicProgram.cs" />
+    <Compile Include="Models\City.cs" />
+    <Compile Include="Models\CivilStatus.cs" />
+    <Compile Include="Models\Country.cs" />
+    <Compile Include="Models\Department.cs" />
+    <Compile Include="Models\DocumentType.cs" />
+    <Compile Include="Models\Gender.cs" />
+    <Compile Include="Models\ModalityType.cs" />
+    <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dtos\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
