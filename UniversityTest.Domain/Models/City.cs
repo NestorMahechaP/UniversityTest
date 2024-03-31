@@ -8,5 +8,6 @@ namespace UniversityTest.Domain.Models
 		public string Description { get; set; }
 
 		public List<Student> Students { get; set; }
+		public List<Student> ExpeditionStudents { get; set; }
 	}
 }

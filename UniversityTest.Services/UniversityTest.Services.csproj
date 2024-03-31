@@ -41,7 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="General\IStudentService.cs" />
+    <Compile Include="General\StudentService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UniversityTest.Domain\UniversityTest.Domain.csproj">
+      <Project>{ED57486D-A76D-4F2B-81C1-42434F7973A7}</Project>
+      <Name>UniversityTest.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UniversityTest.Repository\UniversityTest.Repository.csproj">
+      <Project>{4882124A-E2E6-4627-8553-728ABC480B18}</Project>
+      <Name>UniversityTest.Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -19,22 +19,33 @@ namespace UniversityTest.Persistance.Configurations
 
 			builder.HasRequired(s => s.Student)
 				.WithMany(t => t.CandidateRegisters)
-				.HasForeignKey(u => u.StudentId);
+				.HasForeignKey(u => u.StudentId)
+				.WillCascadeOnDelete(false);
+
 			builder.HasRequired(s => s.AcademicProgram)
 				.WithMany(t => t.CandidateRegisters)
-				.HasForeignKey(u => u.AcademicProgramId);
+				.HasForeignKey(u => u.AcademicProgramId)
+				.WillCascadeOnDelete(false);
+
 			builder.HasRequired(s => s.Campus)
 				.WithMany(t => t.CandidateRegisters)
-				.HasForeignKey(u => u.CampusId);
+				.HasForeignKey(u => u.CampusId)
+				.WillCascadeOnDelete(false);
+
 			builder.HasRequired(s => s.CandidateType)
 				.WithMany(t => t.CandidateRegisters)
-				.HasForeignKey(u => u.CandidateTypeId);
+				.HasForeignKey(u => u.CandidateTypeId)
+				.WillCascadeOnDelete(false);
+
 			builder.HasRequired(s => s.ModalityType)
 				.WithMany(t => t.CandidateRegisters)
-				.HasForeignKey(u => u.ModalityTypeId);
+				.HasForeignKey(u => u.ModalityTypeId)
+				.WillCascadeOnDelete(false);
+
 			builder.HasRequired(s => s.AcademicPeriod)
 				.WithMany(t => t.CandidateRegisters)
-				.HasForeignKey(u => u.AcademicPeriodId);
+				.HasForeignKey(u => u.AcademicPeriodId)
+				.WillCascadeOnDelete(false);
 		}
 	}
 }

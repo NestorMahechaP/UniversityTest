@@ -22,3 +22,75 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.navbar {
+    background-color: #1c2b8d;
+    height: 40px;
+}
+
+.navbar a{
+    color:#000000;
+    font-weight: 600;
+}
+
+.applicant-container {
+    border: 2px solid #bcbcbe;
+    display: inline-flex;
+    width: 70%;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+}
+
+.gender-container {
+    border: 2px solid #bcbcbe;
+    display: inline-flex;
+    justify-content: space-around;
+}
+
+.gender-option {
+    display: flex;
+    align-items: center;
+}
+
+.center-drop{
+    padding-top: 3px;
+}
+
+.center-drop select{
+    width: 100%;
+}
+
+select {
+    height: 28px;
+    background-image: linear-gradient(45deg, transparent 50%, #ff901e), linear-gradient(135deg, #ff901e, transparent 50%), linear-gradient(to right, #ff901e, #ff901e);
+    background-position: calc(100% - 10px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), 100% 0;
+    background-size: 5px 5px, 5px 5px, 1.5em 2.5em;
+    background-repeat: no-repeat;
+}
+
+.subtitle {
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #bcbcbe;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #bcbcbe;
+}
+
+label{
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.space{
+    height: 40px;
+}
+
+.container{
+    width: 100%;
+}
+
+.float-btn{
+    float: right;
+}

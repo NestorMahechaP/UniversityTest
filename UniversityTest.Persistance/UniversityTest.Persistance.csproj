@@ -65,10 +65,14 @@
     <Compile Include="Configurations\GenderConfiguration.cs" />
     <Compile Include="Configurations\ModalityTypeConfiguration.cs" />
     <Compile Include="Configurations\StudentConfiguration.cs" />
+    <Compile Include="Migrations\202403280200099_InitialCreate.cs" />
+    <Compile Include="Migrations\202403280200099_InitialCreate.designer.cs">
+      <DependentUpon>202403280200099_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UniversityDbContext.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
@@ -78,6 +82,11 @@
       <Project>{ED57486D-A76D-4F2B-81C1-42434F7973A7}</Project>
       <Name>UniversityTest.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202403280200099_InitialCreate.resx">
+      <DependentUpon>202403280200099_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

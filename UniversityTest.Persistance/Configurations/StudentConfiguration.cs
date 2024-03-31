@@ -9,7 +9,7 @@ namespace UniversityTest.Persistance.Configurations
 		public StudentConfiguration(EntityTypeConfiguration<Student> builder)
 		{
 			builder.HasKey(x => x.Id);
-			builder.Property(x => x.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+			builder.Property(x => x.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
 			builder.Property(x => x.BirthDate).IsRequired();
 			builder.Property(x => x.DocumentNumber).IsRequired().HasMaxLength(50);
@@ -24,34 +24,53 @@ namespace UniversityTest.Persistance.Configurations
 
 			builder.HasRequired(s => s.BloodType)
 				.WithMany(t => t.Students)
-				.HasForeignKey(u => u.BloodTypeId);
+				.HasForeignKey(u => u.BloodTypeId)
+				.WillCascadeOnDelete(false);
+
 			builder.HasRequired(s => s.City)
 				.WithMany(t => t.Students)
-				.HasForeignKey(u => u.CityId);
+				.HasForeignKey(u => u.CityId)
+				.WillCascadeOnDelete(false);
+
 			builder.HasRequired(s => s.CivilStatus)
 				.WithMany(t => t.Students)
-				.HasForeignKey(u => u.CivilStatusId);
+				.HasForeignKey(u => u.CivilStatusId)
+				.WillCascadeOnDelete(false);
+
 			builder.HasRequired(s => s.Country)
 				.WithMany(t => t.Students)
-				.HasForeignKey(u => u.CountryId);
+				.HasForeignKey(u => u.CountryId)
+				.WillCascadeOnDelete(false);
+
 			builder.HasRequired(s => s.Department)
 				.WithMany(t => t.Students)
-				.HasForeignKey(u => u.DepartmentId);
+				.HasForeignKey(u => u.DepartmentId)
+				.WillCascadeOnDelete(false);
+
 			builder.HasRequired(s => s.DocumentType)
 				.WithMany(t => t.Students)
-				.HasForeignKey(u => u.DocumentTypeId);
+				.HasForeignKey(u => u.DocumentTypeId)
+				.WillCascadeOnDelete(false);
+
 			builder.HasRequired(s => s.ExpeditionCity)
-				.WithMany(t => t.Students)
-				.HasForeignKey(u => u.ExpeditionCityId);
+				.WithMany(t => t.ExpeditionStudents)
+				.HasForeignKey(u => u.ExpeditionCityId)
+				.WillCascadeOnDelete(false);
+
 			builder.HasRequired(s => s.ExpeditionCountry)
-				.WithMany(t => t.Students)
-				.HasForeignKey(u => u.ExpeditionCountryId);
+				.WithMany(t => t.ExpeditionStudents)
+				.HasForeignKey(u => u.ExpeditionCountryId)
+				.WillCascadeOnDelete(false);
+
 			builder.HasRequired(s => s.ExpeditionDepartment)
-				.WithMany(t => t.Students)
-				.HasForeignKey(u => u.ExpeditionDepartmentId);
+				.WithMany(t => t.ExpeditionStudents)
+				.HasForeignKey(u => u.ExpeditionDepartmentId)
+				.WillCascadeOnDelete(false);
+
 			builder.HasRequired(s => s.Gender)
 				.WithMany(t => t.Students)
-				.HasForeignKey(u => u.GenderId);
+				.HasForeignKey(u => u.GenderId)
+				.WillCascadeOnDelete(false);
 		}
 	}
 }

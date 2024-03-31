@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dtos\ItemOption.cs" />
+    <Compile Include="Dtos\StudentDto.cs" />
+    <Compile Include="Dtos\StudentSummaryDto.cs" />
     <Compile Include="Models\AcademicPeriod.cs" />
     <Compile Include="Models\BloodType.cs" />
     <Compile Include="Models\Campus.cs" />
@@ -57,8 +60,6 @@
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Dtos\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
